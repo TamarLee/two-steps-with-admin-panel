@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/bpg-nino-mtavruli-bold.min.css">
-    <title>2Steps</title>
+    <title>ორი ნაბიჯი</title>
   </head>
   <body>
     <header class="white">
@@ -23,24 +23,11 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
+      @foreach($menus as $menu)
       <li class="nav-item active">
-        <a class="nav-link" href="#">კომპანიის შესახებ</a>
+        <a class="nav-link" href="{{ $menu->link }}">{{ $menu->title }}</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">მაღაზიები</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">ფასდაკლებები</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">მედია</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">კულინარია</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">კონტაქტი</a>
-      </li>
+      @endforeach
       <li class="nav-item">
         <a class="nav-link" href="#"><i class="fa fa-search"></i></a>
       </li>

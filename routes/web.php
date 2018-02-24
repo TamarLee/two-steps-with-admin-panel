@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'TagController@showTags');
+Route::get('/', 'MainController@showAll');
 
 Auth::routes();
 
