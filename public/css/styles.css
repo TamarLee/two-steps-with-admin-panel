@@ -1,0 +1,221 @@
+body{
+	background-color: #EFF4F7;
+	font-family: "BPG Nino Mtavruli Bold", sans-serif;
+}
+a,a:hover{
+	color:#2ECC40;
+	text-decoration: none; 
+}
+small{
+	line-height: 1px;
+}
+ul {
+   list-style: none;
+}
+
+ul.lul li:before {
+   content: "•";
+   color: #2ECC40;
+   font-size: 150%;
+   padding-right: 5px;
+}
+
+.btn-smx {
+    font-size: .875rem;
+}
+.nav-logo {
+	width: 115px;
+}
+.navbar-nav .nav-item .nav-link{
+	color: #373737;
+	font-size: 0.8rem;
+	font-weight: 600;
+	margin: 10px;
+}
+.navbar-nav .nav-item .nav-link:hover{
+	color: #2ECC40;
+}
+.carousel-indicators{
+	    margin-left: 80%;
+}
+.carousel .carousel-caption {
+    padding: 0;
+    text-align: left;
+    margin-left: -150px;
+}
+.carousel-control-next, .carousel-control-prev{
+	width: 4%;
+}
+/*carousel ends?*/
+.red{
+	background-color: #fff;
+	padding: 50px 60px;
+	margin: 50px;
+}
+.image-fluid{
+	width: 300px;
+	width: 100%;
+}
+.image-info{
+	padding: 15px;
+}
+.prodigy{
+	background-color: #fff;
+}
+.tetri{
+	background-color: #fff;
+	padding: 30px 50px;
+	margin-bottom: 20px;
+}
+.small{
+	color: #2ECC40;
+}
+.fa{
+	color: #2ECC40;
+}
+
+.pagination .page-item a,
+.pagination .page-item a i{
+	color: #000;
+	border:none;
+}
+.page-item.active .page-link{
+	background-color: #2ECC40;
+}
+.black{
+	background-image: url("../img/bread.png");
+	background-position: 0 650px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	background-color: rgba(0, 0, 0, 0.7);
+	height: 300px;
+}
+.meat{
+	background-image: url("../img/meat.png");
+	background-position: 0 650px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	height: 300px;
+}
+/*#clip {
+  position: absolute;
+  clip: rect(0, 100px, 200px, 0);
+}*/
+.dd{
+	padding: 15px 0 0 0;
+
+}
+.white{
+	background-color: #fff;
+	padding: 0 20px 0 0;
+}
+.whitish{
+	color: #fff;
+}
+
+.igi{
+	width: 300px;
+}
+.gry{
+	background-image: url("../img/shovel.png");
+	padding: 0;
+}
+.grey{
+	background-color: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	height: 100%;
+	padding: 20px 10px;
+
+}
+.greyy{
+	padding: 0 10px 20px 0;
+	background-color: #fff;
+}
+.gray{
+	color: #C9C9C9;
+}
+.rollme{
+	height: 490px;
+	background-color: #fff;
+	padding: 20px 5px;
+}
+.igi{
+	width: 300px;
+}
+.ori{
+	background-color: #E3E8EB;
+	padding: 35px 30px;
+}
+.whii{
+	background-color: #fff;
+	height: 100px;
+	padding: 45px 50px 70px 50px;
+}
+.img-btn{
+	width: 30px;
+}
+/*
+.pagination .page-item a{
+	background-color: transparent;
+	border: 1px solid #E3E8EB;
+}*/
+.page-item.active .page-link{
+	border: 1px solid #2ECC40;
+}
+.center{
+	text-align: center;
+	
+
+}
+.ctr{
+    margin-left: 300px;
+}
+.qw{
+	width: 80px;
+}
+#qww{
+	height: 100px;
+    width:100px;
+	background-image: url("../img/side1.png");
+	background-position: -80px 0px;
+}
+.left{
+    clear: left;
+    margin: 50px 0;
+}
+@media screen and (min-width: 1200px) {
+	.xd{
+		margin: 0;
+		width: auto;
+	}
+
+
+}
+@media screen and (max-width: 768px) {
+	.gry{
+		margin-top: 50px;
+	}
+	.ekko{
+		width: 100%;
+		margin-top: .5rem!important;
+    	margin-bottom: .5rem!important;
+    	text-align: left;
+	}
+	.tetri,
+	.red{
+	padding: 0;
+	}
+
+}
+.robot{
+	font-family: 'Roboto', sans-serif;
+}
+/*.marjvniv{
+	position: absolute;
+	text-align: right;
+}*/
+.fa-instagram,
+.fa-facebook,
+.fa-twitter{
+	color: #B1B1B1;
+}
