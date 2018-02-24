@@ -100,7 +100,7 @@
           <p class=" d-inline float-right"><a href="#">ყველას ნახვა</a></p>
         </div>
           @foreach($tags as $tag)
-          <a href="{{ $tag->link }}" class="btn btn-secondary ekko mr-2"><img src="{{ $tag->image }}" class="img-btn">{{ $tag->title }}</a>
+          <a href="{{ $tag->link }}" class="btn btn-secondary ekko mr-2"><img src="img/{{ $tag->image }}" class="img-btn">{{ $tag->title }}</a>
           @endforeach
       
       </div>
