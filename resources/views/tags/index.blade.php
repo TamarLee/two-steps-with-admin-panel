@@ -3,6 +3,10 @@
 
 @section('content')
 
+@if(!isset($_FILES))
+	dd($_FILES);
+@endif
+
 <div class="row">
 	<div class="col-lg-12">
 		<h3>

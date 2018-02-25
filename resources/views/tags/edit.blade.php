@@ -23,7 +23,7 @@
 @endif
 
 
-{!! Form::model($tag, ['method' => 'PATCH', 'route' => ['tags.update', $tag->id]]) !!}
+{!! Form::model($tag, ['method' => 'PATCH', 'route' => ['tags.update', $tag->id], 'enctype' => 'multipart/form-data', 'files' => 'true']) !!}
 @include('tags.form')
 {!! Form::close() !!}
 

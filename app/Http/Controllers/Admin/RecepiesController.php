@@ -14,7 +14,7 @@ class RecepiesController extends Controller
      */
     public function index()
     {
-        //
+        // 
     }
 
     /**

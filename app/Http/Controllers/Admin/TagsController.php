@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Input;
 use App\Tag;
 
 class TagsController extends Controller
@@ -37,6 +38,7 @@ class TagsController extends Controller
      */
     public function store(Request $request)
     {
+        
         request()->validate([
             'title' => 'required',
             'image' => 'required',
