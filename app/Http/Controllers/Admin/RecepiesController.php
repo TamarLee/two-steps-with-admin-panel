@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Recepie;
 
 class RecepiesController extends Controller
 {
@@ -14,7 +15,7 @@ class RecepiesController extends Controller
      */
     public function index()
     {
-        // 
+        $recepies = Recepie::latest()->paginate(5); return view('recepies.index', compact('recepies'))->with('i', (request()->input('page', 1) -1) *5);
     }
 
     /**
@@ -24,7 +25,7 @@ class RecepiesController extends Controller
      */
     public function create()
     {
-        //
+        return view('recepies.create');
     }
 
     /**
@@ -35,7 +36,17 @@ class RecepiesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        request()->validate([
+            'title' => 'required',
+            'ingredients' => 'required',
+            'description' => 'required',
+            'image' => 'required',
+            'link' => 'required',
+            'tag' => 'required',
+            'author' => 'required',
+        ]);
+        Recepie::create($request->all());
+        return redirect()->route('recepies.index')->with('success', 'Recepie Created Succesfully');
     }
 
     /**
@@ -46,7 +57,8 @@ class RecepiesController extends Controller
      */
     public function show($id)
     {
-        //
+        $recepie = Recepie::find($id);
+        return view('recepies.show', compact('recepie'));
     }
 
     /**
@@ -57,7 +69,8 @@ class RecepiesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $recepie = Recepie::find($id);
+        return view('recepies.edit', compact('recepie'));
     }
 
     /**
@@ -69,7 +82,17 @@ class RecepiesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        request()->validate([
+            'title' => 'required',
+            'ingredients' => 'required',
+            'description' => 'required',
+            'image' => 'required',
+            'link' => 'required',
+            'tag' => 'required',
+            'author' => 'required',
+        ]);
+        Recepie::find($id)->update($request->all());
+        return redirect()->route('recepies.index')->with('success', 'Recepie Updated Succesfully');
     }
 
     /**
@@ -80,6 +103,7 @@ class RecepiesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Recepie::find($id)->delete();
+        return redirect()->route('recepies.index')->with('success', 'Recepie Deleted Successfully');
     }
 }
