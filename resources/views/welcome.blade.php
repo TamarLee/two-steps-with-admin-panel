@@ -70,8 +70,8 @@
           <div class="image-info py-3">
             <p class="small">20 მაისი</p>
             <p>{{ $recepie->title }}</p>
-            <p class="d-inline"><img src="img/eye.png"> <small>300</small> <img src="img/fork.png" class="pl-3"><small> 5 ინგრედიენტი</small></p>
-            <a href="post.html" class="xd btn btn-sm btn-secondary d-inline form-control mx-2"><i class="fa fa-angle-right"></i></a>
+            <p class="d-inline"><img src="{{ url('img/eye.png')}}"> <small>300</small> <img src="{{ url('img/fork.png')}}" class="pl-3"><small> 5 ინგრედიენტი</small></p>
+            <a href="{{ url('/post', $recepie->id) }}" class="xd btn btn-sm btn-secondary d-inline form-control mx-2"><i class="fa fa-angle-right"></i></a>
           </div>
         </div>
       </div>

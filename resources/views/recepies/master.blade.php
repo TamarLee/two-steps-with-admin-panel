@@ -10,7 +10,21 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 </head>
 <body>
-
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="tags">Dashboard</a>
+			</div>
+			<ul class="nav navbar-nav">
+				
+				<li><a href="tags">Tags Table</a></li>
+				<li><a href="recepies">Recepies Table</a></li>
+				
+			</ul>
+			</div>
+		</div>
+	</nav>
 	<div class="container">
 		@yield('content')
 	</div>

@@ -32,7 +32,7 @@
 	<div class="col-xs-12">
 		<div class="form-group">
 			<p><strong>Ingredients : </strong></p>
-			{!! $recepie->ingredient !!}
+			{!! $recepie->ingredients !!}
 		</div>
 	</div>
 

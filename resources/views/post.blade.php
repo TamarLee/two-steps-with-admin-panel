@@ -7,7 +7,7 @@
       <div class="row">
           <div class="col-lg-8">
             <div class="tetri">
-              <a href="#" class="btn btn-secondary"><img src="img/icon3.png" class="img-btn"> ქართული</a>
+              <a href="#" class="btn btn-secondary"><img src="{{ url('img/icon3.png')}}" class="img-btn"> ქართული</a>
               <div class="float-right">
                 <a href="#" class="btn btn-secondary"><i class="fa fa-instagram"></i></a>
                 <a href="#" class="btn btn-secondary"><i class="fa fa-twitter"></i></a>
@@ -45,7 +45,7 @@
           <h5 class="pt-3 center">კულინარიის გაკვეთილები</h5>
         </div>
         @foreach($tags as $tag)
-        <a href="{{ $tag->link }}" class="btn btn-secondary my-2 form-control text-left"><img src="img/{{ $tag->image }}" class="img-btn">{{ $tag->title }}</a>
+        <a href="{{ $tag->link }}" class="btn btn-secondary my-2 form-control text-left"><img src="{{ url('$tag->image')}}" class="img-btn">{{ $tag->title }}</a>
         @endforeach
           <p class="center pt-3"><a href="#">ყველას ნახვა</a></p>
           </div>

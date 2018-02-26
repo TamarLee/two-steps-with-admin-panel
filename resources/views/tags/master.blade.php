@@ -11,6 +11,20 @@
 </head>
 <body>
 
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="tags">Dashboard</a>
+			</div>
+			<ul class="nav navbar-nav">
+				
+				<li><a href="tags">Tags Table</a></li>
+				<li><a href="recepies">Recepies Table</a></li>
+				
+			</ul>
+		</div>
+	</nav>
+
 	<div class="container">
 		@yield('content')
 	</div>

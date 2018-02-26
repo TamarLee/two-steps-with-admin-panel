@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="{{ url('css/font-awesome.min.css')}}">
 	<link rel="stylesheet" href="{{ url('css/styles.css')}}">
 	<link rel="stylesheet" href="{{ url('css/bpg-nino-mtavruli-bold.min.css')}}">
-	<title>ორი ნაბიჯი</title>
+	<title>ადმინ პანელი</title>
 </head>
 <body>
 	<header class="white">
@@ -23,11 +23,13 @@
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
-					@foreach($menus as $menu)
+					
 					<li class="nav-item active">
-						<a class="nav-link" href="{{ $menu->link }}">{{ $menu->title }}</a>
+						<a class="nav-link" href="{{ $menu->link }}">Tags Table</a>
 					</li>
-					@endforeach
+					<li class="nav-item active">
+						<a class="nav-link" href="{{ $menu->link }}">Recepies Table</a>
+					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#"><i class="fa fa-search"></i></a>
 					</li>

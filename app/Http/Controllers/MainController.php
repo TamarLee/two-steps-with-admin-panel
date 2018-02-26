@@ -16,7 +16,7 @@ class MainController extends Controller
     	$rec = Recepie::all();
     	return view('welcome', ['tags' => $tags, 'menus' => $menus, 'recepies'=>$recepies, 'rec'=>$rec]);
     }
-    public function showpost(){
+    public function showpost($id){
     	$menus = Menu::all();
     	$tags = Tag::all();
     	return view('post', ['menus'=>$menus, 'tags' => $tags]);

@@ -1,6 +1,5 @@
 @extends('tags.master')
 
-
 @section('content')
 
 @if(!isset($_FILES))

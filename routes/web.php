@@ -15,8 +15,8 @@ Route::get('/', 'MainController@showAll');
 
 Auth::routes();
 
-Route::get('/admin', 'HomeController@index')->name('home');
 
 Route::resource('tags', 'Admin\TagsController');
+Route::resource('admin', 'Admin\TagsController');
 Route::resource('recepies', 'Admin\RecepiesController');
-Route::get('post', 'MainController@showPost');
+Route::get('post/{id}', 'MainController@showPost');
