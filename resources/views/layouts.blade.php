@@ -28,9 +28,7 @@
 						<a class="nav-link" href="{{ $menu->link }}">{{ $menu->title }}</a>
 					</li>
 					@endforeach
-					<li class="nav-item">
-						<a class="nav-link" href="#"><i class="fa fa-search"></i></a>
-					</li>
+					
 				</ul>
 			</div>
 		</nav>

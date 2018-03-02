@@ -9,7 +9,7 @@
 		</div>
 	</div>
 </div>
- 
+  
 @if(count($errors) > 0)
 	<div class="alert alert-danger">
 		<strong>უუუუპს!!! </strong>აქ რაღაც პრობლემაა...<br>
@@ -22,7 +22,8 @@
 @endif
 
 
-{!! Form::open(['route' => 'tags.store', 'method' => 'POST', 'files' => 'true', 'enctype' => 'multipart/form-data']) !!}
+{!! Form::open(['route' => 'tags.store', 'files' => true]) !!}
+@csrf
 @include('tags.form')
 {!! Form::close() !!}
 

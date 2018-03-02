@@ -38,14 +38,34 @@ class TagsController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         request()->validate([
             'title' => 'required',
             'image' => 'required',
             'link' => 'required',
         ]);
-        Tag::create($request->all());
+
+
+        $originalFile = " ";
+        if($request->hasFile('image')){
+
+            $file = $request->file('image');
+            $destinationPath = public_path('img');
+            $originalFile = $file->getClientOriginalName();
+            $file->move($destinationPath, $originalFile);
+
+        }
+        
+        
+        $data = [
+            'title' => $request->title,
+            'image' => $originalFile,
+            'link' => $request->link,
+        ];
+
+        Tag::create($data);
         return redirect()->route('tags.index')->with('success', 'Tag Created Succesfully');
+       
     }
 
     /**
@@ -86,7 +106,24 @@ class TagsController extends Controller
             'image' => 'required',
             'link' => 'required',
         ]);
-        Tag::find($id)->update($request->all());
+        $originalFile = " ";
+        if($request->hasFile('image')){
+
+            $file = $request->file('image');
+            $destinationPath = public_path('img');
+            $originalFile = $file->getClientOriginalName();
+            $file->move($destinationPath, $originalFile);
+
+        }
+        
+        
+        $data = [
+            'title' => $request->title,
+            'image' => $originalFile,
+            'link' => $request->link,
+        ];
+
+        Tag::find($id)->update($data);
         return redirect()->route('tags.index')->with('success', 'Tag Updated Succesfully');
     }
 

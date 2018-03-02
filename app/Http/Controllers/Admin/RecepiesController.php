@@ -45,6 +45,26 @@ class RecepiesController extends Controller
             'tag' => 'required',
             'author' => 'required',
         ]);
+/*
+        $originalFile = " ";
+        if($request->hasFile('image')){
+
+            $file = $request->file('image');
+            $destinationPath = public_path('img');
+            $originalFile = $file->getClientOriginalName();
+            $file->move($destinationPath, $originalFile);
+
+        }
+
+        $data = [
+            'title' => $request->title,
+            'ingredients' => $request->ingredients,
+            'description' => $request->description,
+            'image' => $originalFile,
+            'link' => $request->link,
+            'tag' => $request->tag,
+            'author' => $request->author,
+        ]*/
         Recepie::create($request->all());
         return redirect()->route('recepies.index')->with('success', 'Recepie Created Succesfully');
     }
@@ -91,6 +111,28 @@ class RecepiesController extends Controller
             'tag' => 'required',
             'author' => 'required',
         ]);
+
+        /*$originalFile = " ";
+        if($request->hasFile('image')){
+
+            $file = $request->file('image');
+            $destinationPath = public_path('img');
+            $originalFile = $file->getClientOriginalName();
+            $file->move($destinationPath, $originalFile);
+
+        }
+
+        $data = [
+            'title' => $request->title,
+            'ingredients' => $request->ingredients,
+            'description' => $request->description,
+            'image' => $originalFile,
+            'link' => $request->link,
+            'tag' => $request->tag,
+            'author' => $request->author,
+        ]
+*/
+
         Recepie::find($id)->update($request->all());
         return redirect()->route('recepies.index')->with('success', 'Recepie Updated Succesfully');
     }

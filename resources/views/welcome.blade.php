@@ -59,7 +59,7 @@
   </div>
   <!-- endlessons -->
   <!-- 6pack -->
-  <div class="container">
+  <div class="container" id="page">
     <h2 class="py-4">ამჟამად პოპულარული</h2>
     <div class="row">
 
